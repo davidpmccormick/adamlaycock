@@ -24,8 +24,11 @@
 			<link rel="shortcut icon" href="/favicon.ico" />
 			<link rel="icon" type="images/png" href="/favicon.png" />
 			<link rel="stylesheet" media="screen" href="{$workspace}/css/adamlaycock.css" />
-			<link rel="stylesheet" media="screen" href="{$workspace}/css/webfonts/webfonts.css" />
 			
+			<xsl:comment>[if !(IE)]<![CDATA[><!]]></xsl:comment>
+				<link rel="stylesheet" media="screen" href="{$workspace}/css/webfonts/webfonts.css" />
+			<xsl:comment><![CDATA[<!]]>[endif]</xsl:comment>	
+					
 			<xsl:comment><![CDATA[[if !IE]><link rel="stylesheet" media="screen" href="]]><xsl:value-of select="$root"/><![CDATA[/workspace/css/webfonts/webfonts.css" /><![endif]]]></xsl:comment>
 			
 			<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
