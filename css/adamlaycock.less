@@ -1,0 +1,256 @@
+@dark: #333;
+@headerheight: 100px;
+@nanoheight: 885px;
+
+body {
+	color: @dark;
+	font-size:11px;
+}
+
+p {
+	font-weight: bold;
+	line-height: 1.3;
+}
+
+a, a:hover {
+	text-decoration:none;
+	color:inherit;
+}
+
+h1 {
+	font-size:30px;
+}
+
+h2 {
+	font-size:11px;
+	margin: 8px 0;
+	line-height: 1.2;
+}
+
+.header {
+	min-height:@headerheight;
+	position:relative;
+	z-index:1;
+}
+
+.header-inner {
+	min-height: @headerheight;
+}
+.navigation ul {
+	margin-top:15px;
+	margin-left:0;
+}
+
+.navigation ul li {
+	list-style: none;
+	font-weight: bold;
+	line-height:1.3;
+}
+
+.navigation ul li a {
+	color: inherit;
+	text-decoration: none;
+}
+
+.adamlaycock {
+	text-indent:-9999px;
+	background:url('../assets/images/adamlaycock.png') no-repeat left center;
+	background-size:95% auto;
+}
+
+.photographer {
+	text-indent:-9999px;
+	background:url('../assets/images/photographer.png') no-repeat left center;
+	background-size:95% auto;
+}
+
+.linetop {
+	border-top:1px solid @dark;
+}
+
+.maincontent {
+
+}
+
+.imagecontainer {
+	margin-bottom:10px;
+}
+
+.largeimagecontainer {
+	margin-bottom:50px;
+}
+
+.flowunder {
+	position:relative;
+	top:-@headerheight;
+}
+
+.allprojects:nth-child(4n+1) {
+	clear:left;
+}
+
+ul.pagination li {
+	float:left;
+	list-style: none;
+	font-weight:bold;
+}
+
+ul.pagination li:before {
+	content: '\0000a0 \0000a0 \0000a0';
+}
+ul.pagination li:after {
+	content: '\0000a0 \0000a0 \0000a0|';
+}
+
+ul.pagination li:last-child:after {
+	content: '';
+}
+
+// misc classes
+.relative {
+	position:relative;
+}
+.right {
+	float:right;
+}
+
+.categorytitles {
+	position:absolute;
+	top:-25px;
+	left:0px;
+	z-index:3;
+}
+.categorytitlespage {
+	position:absolute;
+	top:-25px;
+	left:10px;
+	z-index:3;
+}
+
+// end misc classes
+
+// nano
+/** initial setup **/
+.nano {
+  position : relative;
+  width    : 100%;
+  height   : 100%;
+  overflow : hidden;
+}
+.nano .content {
+  position      : absolute;
+  overflow      : scroll;
+  overflow-x    : hidden;
+  top           : 0;
+  right         : 0;
+  bottom        : 0;
+  left          : 0;
+}
+.nano .content:focus {
+  outline: thin dotted;
+}
+
+.flowunder .nano {
+	height: @nanoheight+@headerheight;
+}
+.flowunder .nano .content {
+	padding-top: @headerheight;
+}
+.nano .content::-webkit-scrollbar {
+  visibility: hidden;
+}
+.has-scrollbar .content::-webkit-scrollbar {
+  visibility: visible;
+}
+.nano > .pane {
+  background : rgba(0,0,0,0.1);
+  position   : absolute;
+  width      : 5px;
+  right      : 5px;
+  top        : 5px;
+  bottom     : 15px;
+  visibility : hidden\9; /* Target only IE7 and IE8 with this hack */
+  opacity    : .01; 
+  -webkit-transition    : .2s;
+  -moz-transition       : .2s;
+  -o-transition         : .2s;
+  transition            : .2s;
+  -moz-border-radius    : 5px;
+  -webkit-border-radius : 5px;  
+  border-radius         : 5px;
+}
+
+.nano.categories > .pane, .nano.featured > .pane {
+	top:35px;
+}
+
+.flowunder .nano > .pane {
+	top: @headerheight + 35px;
+}
+.nano > .pane > .slider {
+  background: rgba(0,0,0,0.1);
+  position              : relative;
+  margin                : 0 1px;
+  -moz-border-radius    : 5px;
+  -webkit-border-radius : 5px;  
+  border-radius         : 5px;
+}
+.nano:hover > .pane, .pane.active, .pane.flashed {
+  visibility : visible\9; /* Target only IE7 and IE8 with this hack */
+  opacity    : 0.99;
+}
+
+.nano { height: @nanoheight; }
+.nano.categories { height: @nanoheight+30; }
+.nano .pane   { background: #ccc; }
+.nano .slider { background: #eee; }
+
+// end nano
+
+.whitebackground {
+	background: #fff;
+}
+
+.largeimage {
+	width:710px!important;
+}
+
+.highup {
+	z-index:3;
+}
+// media queries
+@media (max-width:767px) {
+	.adamlaycock, .photographer {
+		background-size:auto;
+	}
+	.flowunder {
+		position: relative;
+		top: 0;
+	}
+	.flowunder .nano .content {
+		padding-top: 0;
+	}
+	.categorytitlespage {
+		left:0px;
+	}
+	.highup {
+		position:relative;
+	}	
+}
+@media (min-width: 768px) and (max-width: 979px) {
+	.largeimage {
+		width:100%!important;
+	}
+}
+@media (min-width:1200px) {
+	.imagecontainer {
+		margin-bottom: 15px;
+	}
+	.categorytitlespage {
+		left:15px;
+	}
+	.largeimage {
+		width:585px!important;
+	}
+}
+

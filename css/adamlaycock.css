@@ -1,0 +1,303 @@
+body {
+  color: #111111;
+  font-size: 11px;
+}
+p {
+  font-weight: bold;
+  line-height: 1.3;
+}
+a,
+a:hover {
+  text-decoration: none;
+  color: inherit;
+}
+h1 {
+  font-size: 32px;
+  font-family:'AkzidenzGroteskBE-Md';
+  font-weight: normal;
+  font-style: normal;
+}
+h2 {
+  font-size: 11px;
+  margin: 8px 0;
+  line-height: 1.2;
+}
+.header {
+  min-height: 100px;
+  position: relative;
+  z-index: 1;
+}
+.header-inner {
+  min-height: 100px;
+}
+.navigation ul {
+  margin-top: 15px;
+  margin-left: 0;
+}
+.navigation ul li, #menu li, ul.homelinks li {
+  list-style: none;
+  font-weight: bold;
+  line-height: 1.3;
+}
+
+.navigation ul li a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.nav-collapse ul {
+	margin: 0px 15px 20px;
+}
+
+.nav-collapse ul li a {
+	color:#111;
+}
+.adamlaycock {
+
+}
+.photographer {
+
+}
+
+.nano .imagecontainer:last-child {
+	margin-bottom:0;
+}
+
+.linetop {
+  border-top: 1px solid #333333;
+}
+.imagecontainer {
+  margin-bottom: 10px;
+}
+.largeimagecontainer {
+  margin-bottom: 30px;
+}
+.flowunder {
+  position: relative;
+  top: -100px;
+}
+.allprojects:nth-child(4n+1) {
+  clear: left;
+}
+ul.pagination li {
+  float: left;
+  list-style: none;
+  font-weight: bold;
+}
+ul.pagination li:before {
+  content: '\0000a0 \0000a0 \0000a0';
+}
+ul.pagination li:after {
+  content: '\0000a0 \0000a0 \0000a0|';
+}
+ul.pagination li:last-child:after {
+  content: '';
+}
+.relative {
+  position: relative;
+}
+.right {
+  float: right;
+}
+.categorytitles {
+  position: absolute;
+  top: -25px;
+  left: 0px;
+  z-index: 3;
+}
+.categorytitlespage {
+  position: absolute;
+  top: -25px;
+  left: 10px;
+  z-index: 3;
+}
+/** initial setup **/
+.nano {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+.nano .content {
+  position: absolute;
+  overflow: scroll;
+  overflow-x: hidden;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+.nano .content:focus {
+  outline: thin dotted;
+}
+.flowunder .nano .content {
+  padding-top: 100px;
+}
+.nano .content::-webkit-scrollbar {
+  visibility: hidden;
+}
+.has-scrollbar .content::-webkit-scrollbar {
+  visibility: visible;
+}
+.nano > .pane {
+  background: rgba(0, 0, 0, 0.1);
+  position: absolute;
+  width: 7px;
+  right: 5px;
+  top: 5px;
+  bottom: 15px;
+  visibility: hidden\9;
+  /* Target only IE7 and IE8 with this hack */
+
+  opacity: .01;
+  -webkit-transition: .2s;
+  -moz-transition: .2s;
+  -o-transition: .2s;
+  transition: .2s;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
+}
+.nano.categories > .pane,
+.nano.featured > .pane {
+  top: 35px;
+}
+.flowunder .nano > .pane {
+  top: 135px;
+}
+.nano > .pane > .slider {
+  background: rgba(0, 0, 0, 0.5);
+  position: relative;
+  margin: 0 1px;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
+}
+.nano:hover > .pane,
+.pane.active,
+.pane.flashed {
+  visibility: visible\9;
+  /* Target only IE7 and IE8 with this hack */
+
+  opacity: 0.99;
+}
+.nano {
+  height: 740px;
+}
+.flowunder .nano {
+  height: 840px;
+}
+.nano.categories {
+  height: 773px;
+}
+.nano .pane {
+  background: none;
+}
+.nano .slider {
+  background: #333;
+}
+.whitebackground {
+  background: #fff;
+}
+.largeimage {
+  width: 710px!important;
+}
+.highup {
+  z-index: 3;
+}
+.herocontainer {
+  height: 530px;
+}
+@media (max-width: 767px) {
+  h1 {
+	  font-size:15px;
+	  text-shadow: none;
+	  color:#111;
+  }
+  img {width: 100%!important;}
+  .adamlaycock,
+  .photographer {
+    background-size: auto;
+  }
+  .flowunder {
+    position: relative;
+    top: 0;
+  }
+  .flowunder .nano .content {
+    padding-top: 0;
+  }
+  .categorytitlespage {
+    left: 0px;
+  }
+  .highup {
+    position: relative;
+  }
+  .nano .content, .nano{ position:static;height:100%!important; }
+   
+}
+@media (min-width: 768px) and (max-width: 979px) {
+  h1 {
+	  font-size:24px;
+  }
+  .largeimage {
+    width: 100%!important;
+  }
+  .nano {
+    height: 590px;
+  }
+  .flowunder .nano {
+    height: 690px;
+  }
+  .nano.categories {
+    height: 614px;
+  }
+  .herocontainer {
+    height: 420px;
+  }
+}
+@media (min-width: 1200px) {
+  h1 {
+	  font-size:39px;
+  }
+  .imagecontainer {
+    margin-bottom: 15px;
+  }
+  .categorytitlespage {
+    left: 15px;
+  }
+  .largeimage {
+    width: 585px!important;
+  }
+  .nano {
+    height: 925px;
+  }
+  .flowunder .nano {
+    height: 1025px;
+  }
+  .nano.categories {
+    height: 948px;
+  }
+  .herocontainer {
+    height: 640px;
+  }
+
+
+}
+
+.navbar .btn-navbar {
+  border:none;
+  background:none;
+  box-shadow: none;
+  -webkit-box-shadow: none;
+  -moz-box-shadow:none;
+}
+
+.navbar-inner, .navbar-fixed-top .navbar-inner, .navbar-static-top .navbar-inner {
+  background:none;
+  border:none;
+  box-shadow: none;
+}
+
+.navbar .btn-navbar:hover, .navbar .btn-navbar:active, .navbar .btn-navbar.active, .navbar .btn-navbar.disabled, .navbar .btn-navbar[disabled] {
+	background:none!important;
+}
