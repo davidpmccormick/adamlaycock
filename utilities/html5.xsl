@@ -23,21 +23,13 @@
 
 			<link rel="shortcut icon" href="/favicon.ico" />
 			<link rel="icon" type="images/png" href="/favicon.png" />
-			<link rel="stylesheet" media="screen" href="{$workspace}/css/bootstrap.min.css" />
 			<link rel="stylesheet" media="screen" href="{$workspace}/css/adamlaycock.css" />
 			<link rel="stylesheet" media="screen" href="{$workspace}/css/webfonts/webfonts.css" />
 			
 			<xsl:comment><![CDATA[[if !IE]><link rel="stylesheet" media="screen" href="]]><xsl:value-of select="$root"/><![CDATA[/workspace/css/webfonts/webfonts.css" /><![endif]]]></xsl:comment>
 			
-			<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
-			<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.16/jquery-ui.min.js"></script>
-			<script src="{$workspace}/js/bootstrap.min.js"></script>
-			<script src="{$workspace}/js/jquery.nanoscroller.min.js"></script>
-			<script src="{$workspace}/js/overthrow.js"></script>
-			<script src="{$workspace}/js/jquery.isotope.min.js"></script>
-			<script src="{$workspace}/js/adamlaycock.js"></script>
-			<script src="{$workspace}/js/windowload.js"></script>
-			<script src="{$workspace}/js/modernizr.custom.js"></script>			
+			<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+			<script src="{$workspace}/js/master-ck.js"></script>
 
 			<xsl:comment><![CDATA[[if lt IE 9]><script type="text/javascript" src="]]><xsl:value-of select="$root"/><![CDATA[/workspace/js/html5shiv.min.js"></script><![endif]]]></xsl:comment>
 			<xsl:comment><![CDATA[[if (gte IE 6)&(lte IE 8)]><script type="text/javascript" src="]]><xsl:value-of select="$root"/><![CDATA[/workspace/js/selectivizr.min.js"></script><![endif]]]></xsl:comment>
