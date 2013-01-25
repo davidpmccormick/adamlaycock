@@ -13,7 +13,9 @@
 			<div class="linetop span12">
 				<xsl:call-template name="pagination">
 					<xsl:with-param name="pagination" select="/data/archive/pagination" />
-					<xsl:with-param name="pagination-url" select="'/archive/$'" />
+					<xsl:with-param name="pagination-url">
+						<xsl:value-of select="$root" /><xsl:text>/projects/$</xsl:text>
+					</xsl:with-param>
 					<xsl:with-param name="show-navigation" select="false()" />
 					<xsl:with-param name="show-range" select="10" />
 				</xsl:call-template>
