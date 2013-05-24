@@ -14,7 +14,7 @@ h2{font-size:11px;margin:8px 0;line-height:1.2;}
 .nano .imagecontainer:last-child{margin-bottom:0;}
 .linetop{border-top:1px solid #333333;}
 .imagecontainer{margin-bottom:10px;}
-.largeimagecontainer{margin-bottom:30px;}
+.largeimagecontainer{float:left;margin-right:30px;}
 .flowunder{position:relative;top:-100px;}
 .allprojects:nth-child(4n+1){clear:left;}
 ul.pagination li{float:left;list-style:none;font-weight:bold;}

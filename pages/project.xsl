@@ -22,9 +22,10 @@
 			</div>
 		</div>
 		<div class="span9">
-			<div class="flowunder">
-				<div class="nano">
-					<div class="overthrow content">
+			<div class="overthrow content">
+				<div style="margin-top:20px;">
+					<!-- *** construct width dynamically -->				
+					<div style="height:600px;width:100000px;">
 						<xsl:apply-templates select="project/entry/images/item" />
 					</div>
 				</div>
@@ -34,41 +35,14 @@
 </xsl:template>
 
 <xsl:template match="project/entry/images/item">
-	<xsl:if test="position() = 1 and title = ''">
-		<div style="height:20px;width:100%"></div>
-	</xsl:if>
-	<xsl:if test="title != ''">
-		<h2><em><xsl:value-of select="title" /></em></h2>
-	</xsl:if>
 
 	<!-- check if *any* of the images are portrait format -->
-	<xsl:variable name="smallwidth">
-		<xsl:choose>
-			<xsl:when test="*[(/data/project/entry/images/item/image/meta/@width &lt; /data/project/entry/images/item/image/meta/@height)]">
-				<xsl:text>1</xsl:text>
-			</xsl:when>
-			<xsl:otherwise>
-				<xsl:text>0</xsl:text>
-			</xsl:otherwise>
-		</xsl:choose>
-	</xsl:variable>
 	
 	<div class="largeimagecontainer">
 		<div class="row">
-			<xsl:choose>
-				<!-- if there were *any* portrait format images, make all images span two columns -->
-				<xsl:when test="$smallwidth = '1'">
-					<div class="span6">
-						<img src="{$root}/image/1/585/0/0/assets/images/{image/filename}" width="100%" height="auto" />
-					</div>
-				</xsl:when>
-				<!-- otherwise, they were all landscape, so make 'em all span three columns -->
-				<xsl:otherwise>
-					<div class="span9">
-						<img src="{$root}/image/1/885/0/0/assets/images/{image/filename}" width="100%" height="auto" />
-					</div>
-				</xsl:otherwise>
-			</xsl:choose>
+			<div class="span9">
+				<img style="float:left;height:600px;" src="{$root}/image/1/885/0/0/assets/images/{image/filename}" height="600" />
+			</div>
 		</div>
 	</div> <!-- end .largeimagecontainer -->
 </xsl:template>
