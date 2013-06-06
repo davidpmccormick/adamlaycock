@@ -1,4 +1,5 @@
 $(document).ready(function(){
+	
     
     $('.hero').click(function() {
 	    $(this).addClass('hidden');

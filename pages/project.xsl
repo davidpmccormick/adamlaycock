@@ -21,30 +21,31 @@
 				</div>
 			</div>
 		</div>
-		<div class="span9">
-			<div class="overthrow content">
-				<div style="margin-top:20px;">
-					<!-- *** construct width dynamically -->				
-					<div style="height:600px;width:100000px;">
+		
+		<div class="span9" style="overflow:hidden;">
+      <div class="box-wrap antiscroll-wrap">
+        <div class="antiscroll-inner" style="overflow-y:hidden;">
+          <div class="box-inner" style="width:100000px">
 						<xsl:apply-templates select="project/entry/images/item" />
-					</div>
-				</div>
-			</div>
+          </div>
+        </div>
+      </div>
 		</div>
+		
+		
 	</div> <!-- end .row -->
 </xsl:template>
 
 <xsl:template match="project/entry/images/item">
-
-	<!-- check if *any* of the images are portrait format -->
-	
-	<div class="largeimagecontainer">
-		<div class="row">
-			<div class="span9">
-				<img style="float:left;height:600px;" src="{$root}/image/1/885/0/0/assets/images/{image/filename}" height="600" />
-			</div>
-		</div>
-	</div> <!-- end .largeimagecontainer -->
+	<div class="horizontalimagecontainer">
+		<h2>
+			<xsl:value-of select="title" />
+			<xsl:if test="title = ''">
+				<br />
+			</xsl:if>
+		</h2>
+		<img src="{$root}/image/1/0/585/0/assets/images/{image/filename}" />
+	</div>
 </xsl:template>
 
 </xsl:stylesheet>

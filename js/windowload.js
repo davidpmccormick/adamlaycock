@@ -1,5 +1,11 @@
 $(window).load(function() {
+
+	$('.box-wrap').antiscroll({
+     autoHide: true
+  });
+
 	$('.nano').nanoScroller({iOSNativeScrolling: true});
+	
 	$('.isotopecontainer').isotope({
 		itemSelector : '.theimage',
 		layoutMode : 'masonry'
