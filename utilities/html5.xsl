@@ -69,6 +69,11 @@
 					        		<li><a href="#" class="categorieslink">Categories</a></li>
 					        	</ul>
 					        </xsl:if>
+					        <xsl:if test="$current-page-id = '2'">
+					        	<ul class="detailslink">
+					        		<li><a href="#" class="showdetailsbox">Details</a></li>
+					        	</ul>
+					        </xsl:if>
 					      </div>
 					    </div>
 					  </div>
@@ -84,6 +89,11 @@
 						</xsl:attribute>
 						<nav class="navigation span3">
 							<xsl:apply-templates select="data/navigation"/>
+			        <xsl:if test="$current-page-id = '2'">
+			        	<ul class="detailslink">
+			        		<li><a href="#" class="showdetailsbox">Details</a></li>
+			        	</ul>
+			        </xsl:if>
 						</nav>
 						<div class="adamlaycock span3">
 							<a href="{$root}?hero=0"><h1 class="adamlaycock">Adam Laycock</h1></a>
@@ -100,6 +110,7 @@
 								<div style="position:absolute;border-top:1px solid #111; bottom:-2px;left:0;" class="span12"></div>
 							</div>
 						</xsl:if>
+						
 						
 					</div> <!-- end .header-inner -->
 				</header>

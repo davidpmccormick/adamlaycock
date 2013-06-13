@@ -9,7 +9,12 @@
 		
 		<!-- span12 here -->
 		
-		<div class="span12 linetop" style="overflow:hidden;">
+		<div class="span12 linetop relative" style="overflow:hidden;">
+			<div class="detailsbox" style="display:none;position:absolute;top:45px;left:15px;width:300px;background:#fff;z-index:9999;">
+				<div style="padding:10px;">
+					<p>Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Curabitur blandit tempus porttitor. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.</p>
+				</div>
+			</div>
       <div class="box-wrap antiscroll-wrap">
         <div class="antiscroll-inner" style="overflow-y:hidden;">
           <div class="box-inner" style="width:100000px">
