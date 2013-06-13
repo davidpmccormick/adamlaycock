@@ -91,8 +91,12 @@
 							<xsl:apply-templates select="data/navigation"/>
 			        <xsl:if test="$current-page-id = '2'">
 			        	<ul class="detailslink">
-			        		<li><a href="#" class="showdetailsbox">Details</a></li>
+									<xsl:for-each select="/data/project/entry/categories/item">
+										<li style="float:left; margin-right:10px;"><a href="{$root}/category/{title/@handle}"><xsl:value-of select="title" /></a></li>
+									</xsl:for-each>
+			        		<li style="float:left; margin-right:10px;"><a href="#" class="showdetailsbox">Details</a></li>
 			        	</ul>
+			        	
 			        </xsl:if>
 						</nav>
 						<div class="adamlaycock span3">

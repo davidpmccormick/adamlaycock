@@ -36,7 +36,9 @@ h2 {
   margin-top: 15px;
   margin-left: 0;
 }
-
+ul.detailslink {
+	margin-top:32px;
+}
 .navigation ul li, #menu li, ul.homelinks li, ul.detailslink li {
   list-style: none;
   font-weight: bold;
@@ -221,8 +223,11 @@ ul.pagination li:last-child:after {
 .horizontalimagecontainer {
 	display: block;
 	float: left;
+	margin-right:38px;
+}
 
-	margin-right:50px;
+.horizontalimagecontainer:first-child {
+	padding-left:230px;
 }
 
 .horizontalimagecontainer img {
@@ -230,6 +235,10 @@ ul.pagination li:last-child:after {
 }
 
 @media (max-width: 767px) {
+	.horizontalimagecontainer:first-child {
+		padding-left:0px;
+	}
+
 	.horizontalimagecontainer {
 		margin-right:0;
 		width:100%;
@@ -277,6 +286,10 @@ ul.pagination li:last-child:after {
 	.horizontalimagecontainer img {
 		height: 485px;
 	}
+	
+	.horizontalimagecontainer:first-child {
+		padding-left:176px;
+	}
 
 	.antiscroll-inner {
 		width: 734px!important;
@@ -303,6 +316,10 @@ ul.pagination li:last-child:after {
   }
 }
 @media (min-width: 1200px) {
+	.horizontalimagecontainer:first-child {
+		padding-left:285px;
+	}
+
 	.horizontalimagecontainer img {
 		height: 700px;
 	}

@@ -1,9 +1,9 @@
 $(document).ready(function(){
 	
 	$('.showdetailsbox').toggle(function() {
-		$('.detailsbox').stop().fadeTo(200,1);
-	}, function() {
 		$('.detailsbox').stop().fadeTo(200,0);
+	}, function() {
+		$('.detailsbox').stop().fadeTo(200,1);
 	});
     
     $('.hero').click(function() {

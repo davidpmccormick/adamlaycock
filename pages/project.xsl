@@ -7,12 +7,11 @@
 <xsl:template match="data">
 	<div class="row">		
 		
-		<!-- span12 here -->
-		
 		<div class="span12 linetop relative" style="overflow:hidden;">
-			<div class="detailsbox" style="display:none;position:absolute;top:45px;left:15px;width:300px;background:#fff;z-index:9999;">
-				<div style="padding:10px;">
-					<p>Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Curabitur blandit tempus porttitor. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.</p>
+			<div class="detailsbox span3" style="margin-left:-20px;position:absolute;top:25px;left:15px;z-index:9999;">
+				<div style="padding:10px 15px;">
+					<h2><xsl:value-of select="project/entry/title" /></h2>
+					<xsl:copy-of select="project/entry/additional-information" />
 				</div>
 			</div>
       <div class="box-wrap antiscroll-wrap">
